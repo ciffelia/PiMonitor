@@ -5,12 +5,15 @@
 
 ```sh
 $ yarn
+$ mkdir firebase && cp /path/to/serviceAccountKey.json ./firebase/serviceAccountKey.json
 ```
 
 ## Usage
 
 ```sh
-$ WEBSOCKET_PORT=8081 yarn start
+$ export PIMONITOR_FIREBASE_URL=https://<YOUR FIREBASE>.firebaseio.com
+$ export PIMONITOR_WEBSOCKET_PORT=8081
+$ yarn start
 ```
 
 ```sh
