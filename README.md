@@ -13,3 +13,7 @@ $ yarn
 $ WEBSOCKET_PORT=8081 yarn start
 ```
 
+```sh
+$ wscat -c ws://localhost:8081
+```
+
