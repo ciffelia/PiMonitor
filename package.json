@@ -1,0 +1,15 @@
+{
+  "name": "PiMonitor",
+  "version": "1.0.0",
+  "description": "Monitor for Raspberry Pi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "prince0203",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^3.2.0"
+  }
+}
+
