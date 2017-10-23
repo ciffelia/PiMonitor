@@ -8,7 +8,7 @@ const server = new WebSocket.Server({
 });
 
 setInterval(() => {
-  exec(path.join(__dirname, 'pi-sensors'), (err, stdout, stderr) => {
+  exec(path.join(__dirname, '..', 'pi-sensors'), (err, stdout, stderr) => {
     if(err) throw err;
 
     for(client of server.clients) {

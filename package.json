@@ -2,9 +2,9 @@
   "name": "PiMonitor",
   "version": "1.0.0",
   "description": "Monitor for Raspberry Pi",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/app.js"
   },
   "author": "prince0203",
   "license": "MIT",
