@@ -16,7 +16,7 @@ new CronJob('0 * * * * *', () => {
   getSensorsData((err, data) => {
     if(err) throw err;
 
-    const now = moment({ seconds: 0, milliseconds: 0 }).local().toISOString();
+    const now = moment().seconds(0).format();
     firestore.collection('records').doc(now).set(data)
   });
 }, null, true);
