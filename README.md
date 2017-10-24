@@ -1,7 +1,7 @@
 # PiMonitor
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/prince0203/PiMonitor.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/prince0203/PiMonitor.svg?branch=master)](https://travis-ci.org/prince0203/PiMonitor)
+[![Greenkeeper badge](https://badges.greenkeeper.io/prince0203/PiMonitor.svg)](https://greenkeeper.io/)
 
 ## Install
 
