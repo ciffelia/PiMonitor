@@ -17,6 +17,7 @@ class WebSocketServer {
       client.on('error', () => { client.close() });
     });
   }
+  
   broadcast(data) {
     for(const client of this.wss.clients) {
       if (client.readyState === WebSocket.OPEN) {
@@ -27,4 +28,3 @@ class WebSocketServer {
 }
 
 module.exports = WebSocketServer;
-
