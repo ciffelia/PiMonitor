@@ -2,9 +2,11 @@
   "name": "PiMonitor",
   "version": "1.0.0",
   "description": "Monitor for Raspberry Pi",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node lib/index.js",
+    "build": "flow-remove-types src/ -d lib/",
+    "prepublish": "yarn run build"
   },
   "author": "prince0203",
   "license": "MIT",
@@ -13,5 +15,9 @@
     "firebase-admin": "^5.4.2",
     "moment": "^2.19.1",
     "ws": "^3.2.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.57.3",
+    "flow-remove-types": "^1.2.3"
   }
 }
