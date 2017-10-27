@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",
-    "build": "babel src/ -d lib/",
+    "build": "flow-remove-types src/ -d lib/",
     "prepublish": "yarn run build"
   },
   "author": "prince0203",
