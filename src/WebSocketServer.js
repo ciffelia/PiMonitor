@@ -1,7 +1,10 @@
+// @flow
 const WebSocket = require('ws');
 
 class WebSocketServer {
-  constructor(port) {
+  wss: any
+
+  constructor(port: number) {
     this.wss = new WebSocket.Server({
       port,
       clientTracking: true
@@ -18,7 +21,7 @@ class WebSocketServer {
     });
   }
   
-  broadcast(data) {
+  broadcast(data: any) {
     for(const client of this.wss.clients) {
       if (client.readyState === WebSocket.OPEN) {
         client.send(data);

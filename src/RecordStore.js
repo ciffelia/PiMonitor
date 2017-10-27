@@ -1,9 +1,12 @@
+// @flow
 const CronJob = require('cron').CronJob;
 const moment = require('moment');
 const firebaseAdmin = require("firebase-admin");
 const SensorGateway = require('./SensorGateway');
 
 class RecordStore {
+  firestore: any
+
   constructor() {
     const serviceAccount = require('../firebase/serviceAccountKey.json');
     firebaseAdmin.initializeApp({
@@ -15,7 +18,7 @@ class RecordStore {
     new CronJob('0 * * * * *', this.minutelyTask.bind(this), null, true);
   }
   
-  getCollection(time, unit) {
+  getCollection(time: moment, unit: string) {
     switch(unit) {
       case 'minute':
         return this.getDocument(time, 'hour').collection('minute');
@@ -32,7 +35,7 @@ class RecordStore {
     }
   }
   
-  getDocument(time, unit) {
+  getDocument(time: moment, unit: string) {
     const timeDocName = (
       (unit === 'month')
         ? (time.month() + 1).toString()
@@ -41,7 +44,7 @@ class RecordStore {
     return this.getCollection(time, unit).doc(timeDocName);
   }
   
-  addRecord(time, data) {
+  addRecord(time: moment, data: any) {
     this.getDocument(time, 'minute').set(data);
   }
   
