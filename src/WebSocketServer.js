@@ -21,7 +21,7 @@ class WebSocketServer {
     });
   }
   
-  broadcast(data: any) {
+  broadcast(data: mixed) {
     for(const client of this.wss.clients) {
       if (client.readyState === WebSocket.OPEN) {
         client.send(data);

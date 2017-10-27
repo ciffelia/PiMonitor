@@ -44,7 +44,7 @@ class RecordStore {
     return this.getCollection(time, unit).doc(timeDocName);
   }
   
-  addRecord(time: moment, data: any) {
+  addRecord(time: moment, data: mixed) {
     this.getDocument(time, 'minute').set(data);
   }
   
