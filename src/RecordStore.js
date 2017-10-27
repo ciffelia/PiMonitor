@@ -8,6 +8,7 @@ class RecordStore {
   firestore: any
 
   constructor() {
+    // $FlowFixMe
     const serviceAccount = require('../firebase/serviceAccountKey.json');
     firebaseAdmin.initializeApp({
       credential: firebaseAdmin.credential.cert(serviceAccount),
