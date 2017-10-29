@@ -1,0 +1,19 @@
+box: node:8
+
+build:
+  steps:
+    - script:
+      name: install yarn
+      code: npm install -g yarn
+
+    - script:
+      name: set yarn cache
+      code: export YARN_CACHE=$WERCKER_CACHE_DIR/yarn
+
+    - script:
+      name: install dependencies
+      code: yarn
+
+    - script:
+      name: check with flow
+      code: yarn run flow
