@@ -1,0 +1,15 @@
+environment:
+  nodejs_version: "8"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - yarn install
+
+# Post-install test scripts.
+test_script:
+  - yarn run flow
+
+cache:
+ - "%LOCALAPPDATA%\\Yarn"
+
+build: off
