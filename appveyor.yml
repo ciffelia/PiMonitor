@@ -1,12 +1,10 @@
-platform: x64
 environment:
   nodejs_version: "8"
 
 install:
-  - ps: Install-Product node $env:nodejs_version
+  - ps: Install-Product node $env:nodejs_version x64
   - yarn install
 
-# Post-install test scripts.
 test_script:
   - yarn run flow
 
