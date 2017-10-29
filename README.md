@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/prince0203/PiMonitor.svg?branch=master)](https://travis-ci.org/prince0203/PiMonitor)
 [![CircleCI](https://circleci.com/gh/prince0203/PiMonitor.svg?style=svg)](https://circleci.com/gh/prince0203/PiMonitor)
+[![wercker status](https://app.wercker.com/status/a7338e295590f77f90e07fc29691ab68/s/master "wercker status")](https://app.wercker.com/project/byKey/a7338e295590f77f90e07fc29691ab68)
 [![Greenkeeper badge](https://badges.greenkeeper.io/prince0203/PiMonitor.svg)](https://greenkeeper.io/)
 
 ## Install
