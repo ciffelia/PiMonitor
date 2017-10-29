@@ -4,8 +4,10 @@ const moment = require('moment');
 const firebaseAdmin = require("firebase-admin");
 const SensorGateway = require('./SensorGateway');
 
+type TimeUnit = 'year' | 'month' | 'date' | 'hour' | 'minute';
+
 class RecordStore {
-  firestore: any
+  firestore: any;
 
   constructor() {
     // $FlowFixMe
@@ -19,7 +21,7 @@ class RecordStore {
     new CronJob('0 * * * * *', this.minutelyTask.bind(this), null, true);
   }
   
-  getCollection(time: moment, unit: string) {
+  getCollection(time: moment, unit: TimeUnit) {
     switch(unit) {
       case 'minute':
         return this.getDocument(time, 'hour').collection('minute');
@@ -36,7 +38,7 @@ class RecordStore {
     }
   }
   
-  getDocument(time: moment, unit: string) {
+  getDocument(time: moment, unit: TimeUnit) {
     const timeDocName = (
       (unit === 'month')
         ? (time.month() + 1).toString()
