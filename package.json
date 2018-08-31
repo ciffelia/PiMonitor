@@ -17,7 +17,7 @@
     "ws": "^3.2.0"
   },
   "devDependencies": {
-    "flow-bin": "^0.57.3",
+    "flow-bin": "^0.80.0",
     "flow-remove-types": "^1.2.3"
   }
 }
