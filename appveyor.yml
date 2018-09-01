@@ -6,7 +6,7 @@ install:
   - yarn install
 
 test_script:
-  - yarn run flow
+  - yarn flow check
 
 cache:
  - "%LOCALAPPDATA%\\Yarn"
